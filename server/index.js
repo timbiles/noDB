@@ -17,6 +17,8 @@ app.use(cors());
 const url = "/api/firstController";
 //search for movie
 app.get(url, controller.create);
+//display the title we searched
+app.get(url, controller.getSearch);
 // add to favorites button
 app.post(url, controller.favList);
 //edit rating

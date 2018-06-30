@@ -7,23 +7,26 @@ let shows = [];
 let favorites = [];
 
 const create = (req, res, next) => {
-  console.log("hit create");
-  console.log(MOVIE_KEY);
-  console.log(`${baseUrl}/?t=${req.query.t}&apikey=${MOVIE_KEY}`);
+  // console.log("hit create");
+  // console.log(MOVIE_KEY);
+  // console.log(`${baseUrl}/?t=${req.query.t}&apikey=${MOVIE_KEY}`);
   //http://www.omdbapi.com/?t=breaking+bad&apikey=87ac7e25
 
   axios
     .get(`${baseUrl}/?t=${req.query.t}&apikey=${MOVIE_KEY}`)
     .then(resp => {
-      console.log(resp);
+      // console.log(resp);
       shows = resp.data;
       res.status(200).json(shows);
     })
     .catch(e => {
-      // res.status(500).send(e);
-      console.log(MOVIE_KEY);
+      res.status(500).send(e);
       console.log(e);
     });
+};
+
+const getSearch = (req, res, next) => {
+  res.status(200).send(shows);
 };
 
 const favList = (req, res, next) => {
@@ -50,6 +53,7 @@ const deleteList = (req, res, next) => {
 
 module.exports = {
   create,
+  getSearch,
   favList,
   updateList,
   deleteList
