@@ -1,102 +1,40 @@
 import React, { Component } from "react";
 import axios from "axios";
-// import FavBtn from "../FavBtn/FavBtn";
 import "./SearchTitle.css";
 
+import Book from "../Book/Book";
+
 export default class SearchTitle extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
-      title: [],
-      favoriteShow: []
+      books: [],
+      favorites: []
+      // favPage: boolean
     };
   }
 
   componentDidMount() {
-    this.newSearch();
-  }
-
-  newSearch() {
-    axios.get("/api/firstController").then(res => {
-      this.setState({ title: res.data });
-      console.log(res);
+    axios.get(`http://localhost:3001/api/books`).then(res => {
+      this.setState({ books: res.data });
+      console.log(res.data);
     });
   }
 
   render() {
+    const { books } = this.state;
+
     return (
       <div>
-        <input 
-          value={}
-          placeholder="Type in me" type="text"
-          onChange={(e)=> this.handleChange}/>
-        <button
-        // onClick={}
-        >
-          Search your title!
-        </button>
+        <h1>In the Game of Thrones, you win or die.</h1>
+
+        {books.map(book => (
+          <Book name={book.name} numberOfPages={book.numberOfPages} />
+        ))}
+        {/* <button onClick={this.handleClick}>Press me</button> */}
+        <p />
       </div>
     );
   }
 }
-
-//
-//
-//
-//
-//
-//
-//
-//
-
-// export default class SearchTitle extends Component {
-//   constructor() {
-//     super();
-
-//     this.state = {
-//       userInput: [],
-//       favoriteShow: []
-//     };
-
-//     //binding not needed with use of arrow functions
-//   }
-
-//   componentDidMount() {
-//     this.newSearch();
-//   }
-
-//   // handleChange(val){
-//   //   this.setState({})
-//   // }
-
-//   newSearch = () => {
-//     axios
-//       .get(`/api/firstController`)
-//       .then(res => {
-//         this.setState({ userInput: res.data });
-//       })
-//       .catch(() => this.newSearch());
-//   };
-
-//   addFav = () => {
-//     let { userInput, favoriteShow } = this.state;
-//     axios
-//       .post("/api/firstController", { userInput })
-//       .then(res => this.setState({ favoriteShow: res.data }));
-//   };
-
-//   render() {
-//     const { useInput, favoriteShow } = this.state;
-//     return (
-//       <div>
-//         <div className="show-title">Search Tv Shows!!</div>
-//         <input className="show-search" onChange={this.handleChange}/>
-//         <button className="search-btn" onClick={() => this.newSearch()}>
-//           Search for your show!
-//         </button>
-//         <FavBtn add={this.addFavorite} />
-//       </div>
-//     );
-//   }
-// }

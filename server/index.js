@@ -1,30 +1,21 @@
-const express = require("express"),
-  bodyParser = require("body-parser"),
-  cors = require("cors"),
-  axios = require("axios");
-
-require("dotenv").config();
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const axios = require("axios");
 
 const controller = require(`./controllers/firstController`);
 
 const port = 3001;
-
 const app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
 
-const url = "/api/firstController";
-//search for movie
-app.get(url, controller.create);
-//display the title we searched
-app.get(url, controller.getSearch);
-// add to favorites button
-app.post(url, controller.favList);
-//edit rating
-app.put(`${url}:id`, controller.updateList);
-//delete rating
-app.delete(`${url}:id`, controller.deleteList);
+const url = "/api/books";
+app.get(url, controller.getBooks);
+// app.post(url, controller.favList);
+// app.put(`${url}:id`, controller.updateList);
+// app.delete(`${url}:id`, controller.deleteList);
 
 app.listen(port, () => {
   console.log(`Listening on Port ${port}`);
