@@ -1,0 +1,11 @@
+.footer {
+  font-family: "Game of Thrones", serif;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.sigil {
+  height: 50px;
+  width: 100px;
+}

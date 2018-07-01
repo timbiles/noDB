@@ -35,6 +35,14 @@ export default class SearchTitle extends Component {
       .catch(e => console.log(e));
   };
 
+  updateBook = (id, title)=> {
+    axios.put(`/api/characters/${id}`, { title }).then(res => {
+      this.setState({
+        books: res.data
+      });
+    });
+  }
+
   render() {
     const { books, favorites } = this.state;
 
@@ -48,6 +56,7 @@ export default class SearchTitle extends Component {
               numberOfPages={book.numberOfPages}
               image={book.image}
               favorite={() => this.favoriteBook(book)}
+              // updateBook={this.updateBook}
             />
           ))}
         </div>

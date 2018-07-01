@@ -79,6 +79,15 @@ const deleteList = (req, res, next) => {
   res.status(200).json(favorites);
 };
 
+// const updateList = (req, res, next)=>{
+//   if(req.params.id !== typeof null) {
+//     title = req.params.id;
+//     return res.status(200).send(title)
+//   }
+//   res.status(200).send(title);
+// }
+
+//
 // const updateList = (req, res, next) => {
 //   const { imdbRating } = req.body;
 //   const updateRate = req.params.id;
@@ -95,5 +104,5 @@ module.exports = {
   getBooks,
   favList,
   deleteList
-  // updateList,
+  // updateList
 };
