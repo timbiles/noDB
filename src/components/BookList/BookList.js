@@ -28,6 +28,13 @@ export default class SearchTitle extends Component {
     });
   };
 
+  deleteBook = book => {
+    axios
+      .delete(`http://localhost:3001/api/books${book}`)
+      .then(res => this.setState({ favorites: res.data }))
+      .catch(e => console.log(e));
+  };
+
   render() {
     const { books, favorites } = this.state;
 
@@ -54,6 +61,7 @@ export default class SearchTitle extends Component {
               name={book.name}
               numberOfPages={book.numberOfPages}
               image={book.image}
+              delete={this.deleteBook}
             />
           ))}
         </div>

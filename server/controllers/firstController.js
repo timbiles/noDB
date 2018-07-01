@@ -40,13 +40,16 @@ const getBooks = (req, res, next) => {
           image = "http://www.idoc.co/files/d24d10325f256e58c5-0.jpg";
         }
         if (book.name === "The Mystery Knight") {
-          image = "https://img00.deviantart.net/ae44/i/2012/112/c/3/the_mystery_knight_cover_by_teews666-d4x5fl0.png";
+          image =
+            "https://img00.deviantart.net/ae44/i/2012/112/c/3/the_mystery_knight_cover_by_teews666-d4x5fl0.png";
         }
         if (book.name === "A Dance with Dragons") {
-          image = "https://images-na.ssl-images-amazon.com/images/I/51f5%2BHsagGL._SX324_BO1,204,203,200_.jpg";
+          image =
+            "https://images-na.ssl-images-amazon.com/images/I/51f5%2BHsagGL._SX324_BO1,204,203,200_.jpg";
         }
         if (book.name === "The Princess and the Queen") {
-          image = "https://pre00.deviantart.net/060a/th/pre/i/2013/338/6/f/the_princess_and_the_queen_book_cover_by_nateblunt-d6wqf76.jpg";
+          image =
+            "https://pre00.deviantart.net/060a/th/pre/i/2013/338/6/f/the_princess_and_the_queen_book_cover_by_nateblunt-d6wqf76.jpg";
         }
         if (book.name === "The Rogue Prince") {
           image = "http://www.sftv.org/cw/rogues.JPG";
@@ -71,6 +74,11 @@ const favList = (req, res, next) => {
   res.status(200).send(favorites);
 };
 
+const deleteList = (req, res, next) => {
+  favorites.splice(req.params.title, 1);
+  res.status(200).json(favorites);
+};
+
 // const updateList = (req, res, next) => {
 //   const { imdbRating } = req.body;
 //   const updateRate = req.params.id;
@@ -83,15 +91,9 @@ const favList = (req, res, next) => {
 //   res.status(200).send(shows);
 // };
 
-// const deleteList = (req, res, next) => {
-//   favorites.splice(req.params.title, 1);
-//   res.status(200).send(favorites);
-// };
-
 module.exports = {
   getBooks,
-  // getCharacters
-  favList
+  favList,
+  deleteList
   // updateList,
-  // deleteList
 };
