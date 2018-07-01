@@ -1,0 +1,19 @@
+.bookList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.main {
+  border: solid black 2px;
+}
+
+.fav {
+  border: solid black 2px;
+}
+
+.fav-title {
+  font-family: "Game of Thrones", serif;
+  text-align: center;
+  border: solid black 2px;
+}

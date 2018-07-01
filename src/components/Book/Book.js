@@ -1,11 +1,14 @@
-import React, { Componenet } from "react";
-// import './book.css'
+import React from "react";
+import axios from "axios";
+import "./Book.css";
 
 const Book = props => {
   return (
-    <div>
-      <p>{props.name}</p>
+    <div className="book-title">
+      <h3>{props.name}</h3>
+      <img className="image-cover" src={props.image} />
       <p>{props.numberOfPages}</p>
+      {props.favorite ? <button onClick={props.favorite}>Fav</button> : null}
     </div>
   );
 };

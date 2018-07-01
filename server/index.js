@@ -13,7 +13,7 @@ app.use(cors());
 
 const url = "/api/books";
 app.get(url, controller.getBooks);
-// app.post(url, controller.favList);
+app.post(url, controller.favList);
 // app.put(`${url}:id`, controller.updateList);
 // app.delete(`${url}:id`, controller.deleteList);
 

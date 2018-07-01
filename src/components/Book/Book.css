@@ -1,0 +1,11 @@
+.image-cover {
+  height: 200px;
+  width: 150px;
+}
+
+.book-title {
+  border: solid #81383c 8px;
+  width: 16%;
+  text-align: center;
+  margin: 10px;
+}

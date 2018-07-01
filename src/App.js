@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import "./App.css";
 
-import SearchTitle from "./components/SearchTitle/SearchTitle";
+import Title from "./components/Title/Title";
+import BookList from "./components/BookList/BookList";
 
 export default class App extends Component {
   render() {
     return (
       <div className="parent">
-        <SearchTitle />
+        <Title />
+        <BookList />
       </div>
     );
   }
