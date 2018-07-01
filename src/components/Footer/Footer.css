@@ -9,3 +9,10 @@
   height: 50px;
   width: 100px;
 }
+
+.copyright {
+    font-family: "Times New Roman", serif;
+    margin-left: 150px;
+    margin-top: 40px;
+    font-size: 10px;
+}

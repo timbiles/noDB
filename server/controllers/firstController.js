@@ -80,12 +80,16 @@ const deleteList = (req, res, next) => {
 };
 
 // const updateList = (req, res, next)=>{
-//   if(req.params.id !== typeof null) {
-//     title = req.params.id;
-//     return res.status(200).send(title)
-//   }
-//   res.status(200).send(title);
+//   const {name} = req.body;
+//   const {numberOfPages} = req.params;
+//   books.forEach(book=>{
+//     if(book.name === parseInt(id)){
+//       title.name = name;
+//     }
+//   });
+//   res.status(200).send(book);
 // }
+
 
 //
 // const updateList = (req, res, next) => {

@@ -6,10 +6,15 @@
 
 .main {
   border: solid black 2px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .fav {
   border: solid black 2px;
+  background-image: url("https://wallpapersite.com/images/wallpapers/battle-of-the-bastards-4800x2700-game-of-thrones-jon-snow-minimal-12192.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .fav-title {

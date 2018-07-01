@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+// import Noty from "noty";
 import "./BookList.css";
 
 import Book from "../Book/Book";
@@ -15,33 +16,38 @@ export default class SearchTitle extends Component {
   }
 
   componentDidMount() {
-    axios.get(`http://localhost:3001/api/books`).then(res => {
+    axios.get("/api/books").then(res => {
       this.setState({ books: res.data });
       console.log(res.data);
     });
   }
 
   favoriteBook = book => {
-    axios.post("http://localhost:3001/api/books", book).then(res => {
-      this.setState({ favorites: res.data });
-      console.log(res);
-    });
+    let { favorites } = this.state;
+    if (JSON.stringify(favorites).includes(JSON.stringify(book))) {
+      alert("This book is already in your favorites list!");
+    } else {
+      axios
+        .post("/api/books", book)
+        .then(res => this.setState({ favorites: res.data }));
+      // console.log(res);
+    }
   };
 
   deleteBook = book => {
     axios
-      .delete(`http://localhost:3001/api/books${book}`)
+      .delete(`/api/books${book}`)
       .then(res => this.setState({ favorites: res.data }))
       .catch(e => console.log(e));
   };
 
-  updateBook = (id, title)=> {
-    axios.put(`/api/characters/${id}`, { title }).then(res => {
-      this.setState({
-        books: res.data
-      });
-    });
-  }
+  // updateBook = (id, title) => {
+  //   axios.put(`http://localhost:3001/api/books${id}`, { title }).then(res => {
+  //     this.setState({
+  //       books: res.data
+  //     });
+  //   });
+  // };
 
   render() {
     const { books, favorites } = this.state;

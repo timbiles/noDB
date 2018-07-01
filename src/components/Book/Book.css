@@ -1,7 +1,9 @@
 .image-cover {
   height: 200px;
   width: 150px;
-  border: solid black 2px;
+  border: solid 2px;
+  border-radius: 1px 8px 8px 1px;
+  box-shadow: 5px 8px rgb(107, 106, 106);
 }
 
 .book-title {
@@ -9,4 +11,5 @@
   width: 16%;
   text-align: center;
   margin: 10px;
+  background-image: url("http://www.photographyblogger.net/wp-content/uploads/2013/12/Minimal-Winter-12.jpg");
 }
