@@ -6,6 +6,10 @@
   box-shadow: 5px 8px rgb(107, 106, 106);
 }
 
+.image-cover:hover {
+  opacity: 0.7;
+}
+
 .book-title {
   border: solid #81383c 8px;
   width: 16%;
@@ -15,11 +19,13 @@
 }
 
 .fav-btn:hover {
+  opacity: 0.7;
   background-color: #a0494e;
   border-radius: 5px;
 }
 
 .delete-btn:hover {
+  opacity: 0.7;
   background-color: #a0494e;
   border-radius: 5px;
 }

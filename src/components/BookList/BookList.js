@@ -11,7 +11,8 @@ export default class BookList extends Component {
 
     this.state = {
       books: [],
-      favorites: []
+      favorites: [],
+      title: "Favorites"
     };
   }
 
@@ -50,7 +51,7 @@ export default class BookList extends Component {
   };
 
   render() {
-    const { books, favorites } = this.state;
+    const { books, favorites, title } = this.state;
 
     return (
       <div>
@@ -67,8 +68,8 @@ export default class BookList extends Component {
             />
           ))}
         </div>
-        <div>
-          <h2 className="fav-title">Favorites</h2>
+        <div className="fav-title">
+          <h2>{title}</h2>
         </div>
         <div className="bookList fav">
           {favorites.map((book, index) => (

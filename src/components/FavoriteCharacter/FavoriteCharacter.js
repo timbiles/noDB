@@ -55,7 +55,7 @@ export default class FavoriteCharacter extends Component {
             Add
           </button>
         </div>
-
+          
         {list}
       </div>
     );

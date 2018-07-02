@@ -21,6 +21,9 @@
 .fav-title {
   font-family: "Game of Thrones", serif;
   text-align: center;
+  /* font-size: 30px;
+  font-weight: bold; */
+  margin: 20px;
 }
 
 .character-input {

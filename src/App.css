@@ -2,6 +2,11 @@ body {
   background-color: #e7e9e8;
 }
 
+.image-icon {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* .App {
   text-align: center;
 }

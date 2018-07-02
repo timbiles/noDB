@@ -1,13 +1,13 @@
-body {
+/* body {
   font-family: "Game of Thrones", serif;  
-}
+} */
 
 .title-name {
+  font-family: "Game of Thrones", serif;
   text-align: right;
   letter-spacing: 4px;
   margin-top: 30px;
 }
-
 
 .navbar {
   display: flex;
@@ -20,6 +20,7 @@ body {
 }
 
 .header {
+  font-family: "Game of Thrones", serif;
   text-align: center;
 }
 
@@ -31,8 +32,8 @@ body {
   /* padding: 1px;   */
 }
 .myImage:hover {
-    /* opacity: 0.7; */
-    height: 100%;
-    width: 100%;
-    position: absolute;
+  /* opacity: 0.7; */
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
