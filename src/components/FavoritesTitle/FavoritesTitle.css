@@ -1,0 +1,10 @@
+.fav-title {
+  font-family: "Game of Thrones", serif;
+  text-align: center;
+  margin: 20px;
+}
+
+.title-btn:hover {
+  background-color: #a0494e;
+  border-radius: 5px;
+}

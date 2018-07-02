@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import "./App.css";
 
 import Title from "./components/Title/Title";
+import ImageIcon from "./components/ImageIcon/ImageIcon";
 import BookList from "./components/BookList/BookList";
 import Footer from "./components/Footer/Footer";
-import ImageIcon from "./components/ImageIcon/ImageIcon"
 
 export default class App extends Component {
   render() {
@@ -12,7 +12,7 @@ export default class App extends Component {
       <div className="parent">
         <Title />
         <div className="image-icon">
-          <ImageIcon />        
+          <ImageIcon />
           <ImageIcon />
         </div>
         <BookList />

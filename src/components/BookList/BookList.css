@@ -18,19 +18,7 @@
   background-size: 100%;
 }
 
-.fav-title {
-  font-family: "Game of Thrones", serif;
-  text-align: center;
-  margin: 20px;
-}
-
 .character-input {
   text-align: center;
   font-family: "Game of Thrones", serif;
 }
-
-.title-btn:hover {
-  background-color: #a0494e;
-  border-radius: 5px;
-}
-
