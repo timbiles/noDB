@@ -21,8 +21,6 @@
 .fav-title {
   font-family: "Game of Thrones", serif;
   text-align: center;
-  /* font-size: 30px;
-  font-weight: bold; */
   margin: 20px;
 }
 
@@ -30,3 +28,9 @@
   text-align: center;
   font-family: "Game of Thrones", serif;
 }
+
+.title-btn:hover {
+  background-color: #a0494e;
+  border-radius: 5px;
+}
+

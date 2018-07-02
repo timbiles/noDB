@@ -15,7 +15,7 @@ const url = "/api/books";
 app.get(url, controller.getBooks);
 app.post(url, controller.favList);
 app.delete(`${url}/:isbn`, controller.deleteList);
-app.put(`${url}/:isbn`, controller.updateList);
+app.put(`${url}/title`, controller.updateTitle);
 
 app.listen(port, () => {
   console.log(`Listening on Port ${port}`);

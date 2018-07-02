@@ -4,6 +4,7 @@ const baseUrl = "https://anapioficeandfire.com/api/books";
 // const books = require("../data/books.json");
 let books = [];
 let favorites = [];
+let title = "";
 
 const getBooks = (req, res, next) => {
   console.log("hit create");
@@ -77,20 +78,19 @@ const favList = (req, res, next) => {
 const deleteList = (req, res, next) => {
   const { isbn } = req.params;
   const bookIndex = favorites.findIndex(b => b.isbn === isbn);
-  favorites.splice(bookIndex, 1); 
+  favorites.splice(bookIndex, 1);
   res.status(200).json(favorites);
 };
 
-const updateList = (req, res, next) => {
-  const { books } = req.body;
-  const { isbn } = req.params;
-
-  res.status(200).send(books);
+const updateTitle = (req, res, next) => {
+  title = req.body.newInput;
+  res.status(200).send(title);
+  // console.log(req.body);
 };
 
 module.exports = {
   getBooks,
   favList,
   deleteList,
-  updateList
+  updateTitle
 };
