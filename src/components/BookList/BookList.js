@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Noty from "noty";
 import "./BookList.css";
 
 import Book from "../Book/Book";
@@ -26,8 +25,7 @@ export default class BookList extends Component {
   favoriteBook = book => {
     let { favorites } = this.state;
     if (JSON.stringify(favorites).includes(JSON.stringify(book))) {
-      alert("This book is already in your favorites list!")
-        
+      alert("This book is already in your favorites list!");
     } else {
       axios
         .post("/api/books", book)
@@ -79,7 +77,7 @@ export default class BookList extends Component {
               name={book.name}
               numberOfPages={book.numberOfPages}
               image={book.image}
-              delete={this.deleteBook}
+              deleteBook={this.deleteBook}
             />
           ))}
         </div>

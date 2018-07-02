@@ -75,20 +75,18 @@ const favList = (req, res, next) => {
 };
 
 const deleteList = (req, res, next) => {
-  const {isbn} = req.body;
-  const bookIndex = favorites.findIndex(book=>book.isbn === isbn);
-  favorites.splice(bookIndex, 1);
+  const { isbn } = req.params;
+  const bookIndex = favorites.findIndex(b => b.isbn === isbn);
+  favorites.splice(bookIndex, 1); 
   res.status(200).json(favorites);
-  console.log({baseUrl})
 };
 
-const updateList = (req, res, next)=>{
-  const {books} = req.body;
-  const {isbn} = req.params;
-  
-  res.status(200).send(books);
-}
+const updateList = (req, res, next) => {
+  const { books } = req.body;
+  const { isbn } = req.params;
 
+  res.status(200).send(books);
+};
 
 module.exports = {
   getBooks,

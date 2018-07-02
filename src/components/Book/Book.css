@@ -1,7 +1,7 @@
 .image-cover {
-  height: 200px;
-  width: 150px;
-  border: solid 2px;
+  height: 55%;
+  width: 75%;
+  border: solid black 2px;
   border-radius: 1px 8px 8px 1px;
   box-shadow: 5px 8px rgb(107, 106, 106);
 }
@@ -23,3 +23,7 @@
   background-color: #a0494e;
   border-radius: 5px;
 }
+
+/* picture w & h */
+/* height: 200px;
+  width: 150px; */

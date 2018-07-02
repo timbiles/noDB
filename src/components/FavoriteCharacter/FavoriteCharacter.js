@@ -26,7 +26,7 @@ export default class FavoriteCharacter extends Component {
     });
   }
 
-  handleKeyPress = e => {
+  handleKeyDown = e => {
     if (e.keyCode === 13) {
       this.setState({
         characterList: [...this.state.characterList, this.state.input],
@@ -49,14 +49,12 @@ export default class FavoriteCharacter extends Component {
             size={40}
             placeholder="Tell us your favorite Character!"
             onChange={e => this.handleInputChange(e.target.value)}
-            onKeyDown={this.handleKeyPress}
+            onKeyDown={this.handleKeyDown}
           />
           <button onClick={this.handleAddTask} className="add-btn">
             Add
           </button>
         </div>
-
-        <br />
 
         {list}
       </div>
