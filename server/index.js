@@ -14,8 +14,8 @@ app.use(cors());
 const url = "/api/books";
 app.get(url, controller.getBooks);
 app.post(url, controller.favList);
-app.delete(`${url}:id`, controller.deleteList);
-// app.put(`${url}:id`, controller.updateList);
+app.delete(`${url}/:isbn`, controller.deleteList);
+app.put(`${url}/:isbn`, controller.updateList);
 
 app.listen(port, () => {
   console.log(`Listening on Port ${port}`);

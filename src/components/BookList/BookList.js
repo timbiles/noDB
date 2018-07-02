@@ -26,13 +26,8 @@ export default class BookList extends Component {
   favoriteBook = book => {
     let { favorites } = this.state;
     if (JSON.stringify(favorites).includes(JSON.stringify(book))) {
-      new Noty({
-        text: "This book is already in your favorites list!",
-        animation: {
-          open: "animated bounceInRight",
-          close: "animated bounceOutRight"
-        }
-      }).show();
+      alert("This book is already in your favorites list!")
+        
     } else {
       axios
         .post("/api/books", book)
@@ -43,18 +38,18 @@ export default class BookList extends Component {
 
   deleteBook = book => {
     axios
-      .delete(`/api/books${book}`)
+      .delete(`/api/books/${book}`)
       .then(res => this.setState({ favorites: res.data }))
       .catch(e => console.log(e));
   };
 
-  // updateBook = (id, books) => {
-  //   axios.put(`http://localhost:3001/api/books${id}`, { books }).then(res => {
-  //     this.setState({
-  //       books: res.data
-  //     });
-  //   });
-  // };
+  updateBook = (isbn, books) => {
+    axios.put(`/api/books${isbn}`, { books }).then(res => {
+      this.setState({
+        books: res.data
+      });
+    });
+  };
 
   render() {
     const { books, favorites } = this.state;
@@ -68,6 +63,7 @@ export default class BookList extends Component {
               name={book.name}
               numberOfPages={book.numberOfPages}
               image={book.image}
+              isbn={book.isbn}
               favorite={() => this.favoriteBook(book)}
               updateBook={this.updateBook}
             />
