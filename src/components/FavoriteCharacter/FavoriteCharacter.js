@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import swal from "sweetalert2";
 import "./FavoriteCharacter.css";
 
 import CharacterList from "../CharacterList/CharacterList";
@@ -20,6 +21,13 @@ export default class FavoriteCharacter extends Component {
   }
 
   handleAddTask() {
+    swal({
+      position: "top-end",
+      type: "success",
+      title: "Hodor",
+      showConfirmButton: false,
+      timer: 250
+    });
     this.setState({
       characterList: [...this.state.characterList, this.state.input],
       input: ""
@@ -28,6 +36,13 @@ export default class FavoriteCharacter extends Component {
 
   handleKeyDown = e => {
     if (e.keyCode === 13) {
+      swal({
+        position: "top-end",
+        type: "success",
+        title: "Hodor",
+        showConfirmButton: false,
+        timer: 250
+      });
       this.setState({
         characterList: [...this.state.characterList, this.state.input],
         input: ""

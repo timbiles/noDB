@@ -13,7 +13,7 @@ const Title = () => {
         </audio> */}
 
         <h1 className="header">
-          When you play the Game of Thrones, you win or you die.
+          When you play the Game of Code, you win or you die.
         </h1>
         <input
           type="image"
