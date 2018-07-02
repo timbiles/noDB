@@ -5,13 +5,14 @@
 }
 
 .main {
-  border: solid black 2px;
+  border: solid black 5px;
   margin-left: 100px;
   margin-right: 100px;
+
 }
 
 .fav {
-  border: solid black 2px;
+  border: solid black 5px;
   background-image: url("https://wallpapersite.com/images/wallpapers/battle-of-the-bastards-4800x2700-game-of-thrones-jon-snow-minimal-12192.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -20,4 +21,9 @@
 .fav-title {
   font-family: "Game of Thrones", serif;
   text-align: center;
+}
+
+.character-input {
+  text-align: center;
+  font-family: "Game of Thrones", serif;
 }

@@ -4,8 +4,9 @@ import axios from "axios";
 import "./BookList.css";
 
 import Book from "../Book/Book";
+import FavoriteCharacter from "../FavoriteCharacter/FavoriteCharacter";
 
-export default class SearchTitle extends Component {
+export default class BookList extends Component {
   constructor() {
     super();
 
@@ -41,8 +42,8 @@ export default class SearchTitle extends Component {
       .catch(e => console.log(e));
   };
 
-  // updateBook = (id, title) => {
-  //   axios.put(`http://localhost:3001/api/books${id}`, { title }).then(res => {
+  // updateBook = (id, books) => {
+  //   axios.put(`http://localhost:3001/api/books${id}`, { books }).then(res => {
   //     this.setState({
   //       books: res.data
   //     });
@@ -62,7 +63,7 @@ export default class SearchTitle extends Component {
               numberOfPages={book.numberOfPages}
               image={book.image}
               favorite={() => this.favoriteBook(book)}
-              // updateBook={this.updateBook}
+              updateBook={this.updateBook}
             />
           ))}
         </div>
@@ -80,6 +81,11 @@ export default class SearchTitle extends Component {
             />
           ))}
         </div>
+        <h2 className="fav-title">Favorite Character</h2>
+        <div className="character-input">
+          <FavoriteCharacter />
+        </div>
+        <div />
       </div>
     );
   }

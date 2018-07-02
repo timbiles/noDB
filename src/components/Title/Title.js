@@ -7,21 +7,27 @@ const Title = () => {
       {/* <audio controls autoplay> 
       <source src="https://www.youtube.com/watch?v=pS-gbqbVd8c"/> 
       </audio> */}
-      <input
-        type="image"
-        className="myImage"
-        src="https://s7776.pcdn.co/wp-content/uploads/2015/06/game-of-thrones-night-king-white-walker-1200x640.jpg"
-        alt="The Knight King"
-      />
+      
       <h1 className="header">
         When you play the Game of Thrones, you win or you die.
       </h1>
       <input
         type="image"
         className="myImage"
+        src="https://i.imgur.com/0d1jvWF.jpg"
+        alt="The Knight King"
+      />
+      <input
+        type="image"
+        className="myImage"
         src="https://media1.popsugar-assets.com/files/thumbor/2VLr0tUUS0Yi62arQFv87bpqXx0/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2017/08/09/904/n/1922283/0f141506598b73b291b091.43594297_edit_img_cover_file_43858141_1502310679/i/How-Tell-Daenerys-Dragons-Apart-Game-Thrones.jpg"
         alt="Dragon"
-        
+      />
+      <input
+        type="image"
+        className="myImage"
+        src="http://static1.uk.businessinsider.com/image/57460e11dd0895f57a8b4798-1783-891/screen%20shot%202016-05-25%20at%203.59.56%20pm.png"
+        alt="Dragon"
       />
     </div>
   );
@@ -30,3 +36,5 @@ const Title = () => {
 export default Title;
 
 // https://i.imgur.com/0d1jvWF.jpg
+
+

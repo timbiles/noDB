@@ -75,34 +75,22 @@ const favList = (req, res, next) => {
 };
 
 const deleteList = (req, res, next) => {
-  favorites.splice(req.params.title, 1);
+  favorites.splice(req.params.name, 1);
   res.status(200).json(favorites);
+  console.log({baseUrl})
 };
 
 // const updateList = (req, res, next)=>{
 //   const {name} = req.body;
 //   const {numberOfPages} = req.params;
 //   books.forEach(book=>{
-//     if(book.name === parseInt(id)){
+//     if(books.name === name){
 //       title.name = name;
 //     }
 //   });
-//   res.status(200).send(book);
+//   res.status(200).send(books);
 // }
 
-
-//
-// const updateList = (req, res, next) => {
-//   const { imdbRating } = req.body;
-//   const updateRate = req.params.id;
-//   const showIndex = shows.findIndex(title => title.id == updateRate);
-//   let show = shows[showIndex];
-//   shows[showIndex] = {
-//     ...show,
-//     imdbRating: imdbRating
-//   };
-//   res.status(200).send(shows);
-// };
 
 module.exports = {
   getBooks,
