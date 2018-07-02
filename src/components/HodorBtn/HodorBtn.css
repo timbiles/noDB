@@ -1,0 +1,10 @@
+.hodor-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.hodor {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}

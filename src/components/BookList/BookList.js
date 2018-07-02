@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
+import swal from "sweetalert2";
 import "./BookList.css";
 
 import Book from "../Book/Book";
 import FavoriteTitle from "../FavoritesTitle/FavoritesTitle";
-import FavoriteCharacter from "../FavoriteCharacter/FavoriteCharacter";
 
 export default class BookList extends Component {
   constructor() {
@@ -26,7 +26,7 @@ export default class BookList extends Component {
   favoriteBook = book => {
     let { favorites } = this.state;
     if (JSON.stringify(favorites).includes(JSON.stringify(book))) {
-      alert("This book is already in your favorites list!");
+      swal("This book is already in your favorites list!");
     } else {
       axios
         .post("/api/books", book)
@@ -59,7 +59,8 @@ export default class BookList extends Component {
             />
           ))}
         </div>
-        <div>
+        <div className="favorite-bar">
+        <br/>
           <FavoriteTitle />
         </div>
         <div className="bookList fav">
@@ -73,11 +74,6 @@ export default class BookList extends Component {
             />
           ))}
         </div>
-        <h2 className="fav-title">Favorite Character</h2>
-        <div className="character-input">
-          <FavoriteCharacter />
-        </div>
-        <div />
       </div>
     );
   }

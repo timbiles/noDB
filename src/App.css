@@ -5,6 +5,7 @@ body {
 .image-icon {
   display: flex;
   justify-content: space-between;
+  font-family: "Game of Thrones", serif;
 }
 
 /* .App {

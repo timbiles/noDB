@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./FavoriteCharacter.css";
 
-import CharacterList from "./CharacterList/CharacterList";
+import CharacterList from "../CharacterList/CharacterList";
 
 export default class FavoriteCharacter extends Component {
   constructor() {
@@ -55,7 +55,7 @@ export default class FavoriteCharacter extends Component {
             Add
           </button>
         </div>
-          
+
         {list}
       </div>
     );

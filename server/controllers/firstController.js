@@ -1,15 +1,13 @@
 const axios = require("axios");
 const baseUrl = "https://anapioficeandfire.com/api/books";
 
-// const books = require("../data/books.json");
 let books = [];
 let favorites = [];
 let title = "";
 
 const getBooks = (req, res, next) => {
-  console.log("hit create");
+  // console.log("hit create");
   books = [];
-  // res.status(200).send(books);
   axios
     .get(`${baseUrl}`)
     .then(resp => {

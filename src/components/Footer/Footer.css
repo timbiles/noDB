@@ -1,4 +1,13 @@
-.footer {
+/* .footer {
+  background-image: url("http://i.imgur.com/bvFwFPo.jpg");
+  height: 100px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+.footer-bar {
   font-family: "Game of Thrones", serif;
   display: flex;
   justify-content: space-between;
@@ -11,8 +20,12 @@
 }
 
 .copyright {
-    font-family: "Times New Roman", serif;
-    margin-left: 150px;
-    margin-top: 40px;
-    font-size: 10px;
+  font-family: "Times New Roman", serif;
+  margin-left: 150px;
+  margin-top: 40px;
+  font-size: 10px;
+}
+
+.footer-title {
+  text-align: center;
 }

@@ -5,6 +5,7 @@ import Title from "./components/Title/Title";
 import ImageIcon from "./components/ImageIcon/ImageIcon";
 import BookList from "./components/BookList/BookList";
 import Footer from "./components/Footer/Footer";
+import HodorBtn from "./components/HodorBtn/HodorBtn";
 
 export default class App extends Component {
   render() {
@@ -13,6 +14,7 @@ export default class App extends Component {
         <Title />
         <div className="image-icon">
           <ImageIcon />
+          <HodorBtn />
           <ImageIcon />
         </div>
         <BookList />
