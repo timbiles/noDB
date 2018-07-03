@@ -37,7 +37,7 @@ export default class BookList extends Component {
 
   deleteBook = book => {
     axios
-      .delete(`/api/books/${book}`)
+      .delete(`/api/books/${book.name}`)
       .then(res => this.setState({ favorites: res.data }))
       .catch(e => console.log(e));
   };
@@ -60,7 +60,7 @@ export default class BookList extends Component {
           ))}
         </div>
         <div className="favorite-bar">
-        <br/>
+          <br />
           <FavoriteTitle />
         </div>
         <div className="bookList fav">
@@ -70,6 +70,7 @@ export default class BookList extends Component {
               name={book.name}
               numberOfPages={book.numberOfPages}
               image={book.image}
+              isbn={book.isbn}
               deleteBook={this.deleteBook}
             />
           ))}

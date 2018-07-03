@@ -5,6 +5,7 @@ const Book = props => {
   const {
     name,
     image,
+    isbn,
     numberOfPages,
     favorite,
     // updateBook,
@@ -36,7 +37,7 @@ const Book = props => {
       )}
 
       {deleteBook && (
-        <button className="delete-btn" onClick={() => deleteBook(props.isbn)}>
+        <button className="delete-btn" onClick={() => deleteBook(isbn)}>
           Delete
         </button>
       )}
