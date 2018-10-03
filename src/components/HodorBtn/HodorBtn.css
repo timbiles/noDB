@@ -8,3 +8,8 @@
   width: 60px;
   border-radius: 50%;
 }
+
+.hodor_btn {
+  display: flex;
+  justify-content: center;
+}

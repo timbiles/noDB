@@ -2,34 +2,13 @@ import React from "react";
 import "./Book.css";
 
 const Book = props => {
-  const {
-    name,
-    image,
-    isbn,
-    numberOfPages,
-    favorite,
-    // updateBook,
-    deleteBook
-  } = props;
+  const { name, image, isbn, numberOfPages, favorite, deleteBook } = props;
 
   return (
     <div className="book-title">
       <h3>{name}</h3>
-      <img className="image-cover" src={image} alt="Snowy background" />
+      <img className="image-cover" src={image} alt="Book cover" />
       <p>Number of Pages: {numberOfPages}</p>
-      {/* {favorite ? (
-        <button className="fav-btn" onClick={favorite}>
-          Fav
-        </button>
-      ) : null} */}
-      {/* {updateBook ? <button onClick={()=> updateBook(isbn)}>Update</button> : null}       */}
-
-      {/* {deleteBook ? (
-        <button className="delete-btn" onClick={() => deleteBook(props.isbn)}>
-          Delete
-        </button>
-      ) : null} */}
-
       {favorite && (
         <button className="fav-btn" onClick={favorite}>
           Fav

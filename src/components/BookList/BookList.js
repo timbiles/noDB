@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import axios from "axios";
-import swal from "sweetalert2";
-import "./BookList.css";
+import React, { Component } from 'react';
+import axios from 'axios';
+import swal from 'sweetalert2';
+import './BookList.css';
 
-import Book from "../Book/Book";
-import FavoriteTitle from "../FavoritesTitle/FavoritesTitle";
+import Book from '../Book/Book';
+import FavoriteTitle from '../FavoritesTitle/FavoritesTitle';
 
 export default class BookList extends Component {
   constructor() {
@@ -17,19 +17,19 @@ export default class BookList extends Component {
   }
 
   componentDidMount() {
-    axios.get("/api/books").then(res => {
+    axios.get('/api/books').then(res => {
       this.setState({ books: res.data });
-      console.log(res.data);
+      // console.log(res.data);
     });
   }
 
   favoriteBook = book => {
     let { favorites } = this.state;
     if (JSON.stringify(favorites).includes(JSON.stringify(book))) {
-      swal("This book is already in your favorites list!");
+      swal('This book is already in your favorites list!');
     } else {
       axios
-        .post("/api/books", book)
+        .post('/api/books', book)
         .then(res => this.setState({ favorites: res.data }));
       // console.log(res);
     }
@@ -37,7 +37,7 @@ export default class BookList extends Component {
 
   deleteBook = book => {
     axios
-      .delete(`/api/books/${book.name}`)
+      .delete(`/api/books/${book}`)
       .then(res => this.setState({ favorites: res.data }))
       .catch(e => console.log(e));
   };

@@ -6,7 +6,6 @@ let favorites = [];
 let title = "";
 
 const getBooks = (req, res, next) => {
-  // console.log("hit create");
   books = [];
   axios
     .get(`${baseUrl}`)

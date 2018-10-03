@@ -7,7 +7,7 @@ import FavoriteCharacter from "../FavoriteCharacter/FavoriteCharacter";
 const Footer = () => {
   return (
     <div className="footer">
-      <div footer-title>
+      <div className='footer-title'>
         <h2 className="fav-title">Favorite Character</h2>
           <div className="character-input">
           <FavoriteCharacter />

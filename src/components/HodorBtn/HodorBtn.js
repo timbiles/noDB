@@ -19,12 +19,12 @@ export default class HodorBtn extends Component {
 
   render() {
     const { list } = this.state;
-    let mappedElem = list.map((e, i) => {
+    let mappedElem = list.map(e => {
       return <div>{e}</div>;
     });
     return (
       <div>
-        <div>
+        <div className='hodor_btn'>
           <input
             type="image"
             className="hodor"
@@ -34,7 +34,7 @@ export default class HodorBtn extends Component {
           />
         </div>
         <br />
-        <div class="hodor-list">{mappedElem}</div>
+        <div className="hodor-list">{mappedElem}</div>
       </div>
     );
   }

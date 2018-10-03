@@ -14,10 +14,13 @@
     "sweetalert2": "^7.24.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently --kill-others \"nodemon server/index.js\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:3001"
+  "proxy": "http://localhost:3001",
+  "devDependencies": {
+    "concurrently": "^4.0.1"
+  }
 }
